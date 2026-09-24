@@ -1,5 +1,5 @@
 ---
-version: 0.22
+version: 0.25
 updated: 2026-09-23
 file: dm-vault.html
 aliases: [help, aide]
@@ -26,7 +26,8 @@ How the sample is organised (a good layout for your own campaign):
 | `Monsters` | one note per creature (`type: monster`), sorted by type: the SRD 5.2 bestiary plus your own |
 | `Rules` | rules and conditions (`type: rule`); the 2024 conditions are in `Rules/Conditions` |
 | `Images` | maps, portraits, handouts (placeholders in the sample: replace them with your own, same file names) |
-| `templates` | Scene, NPC, Merchant and Monster templates for *New note* |
+| `templates` | Scene, NPC, Merchant, Monster, Spell, Item and Feat templates for *New note* |
+| `Spells`, `Items`, `Feats` | the SRD 5.2 spells, magic items and feats |
 
 The numbers in front of the scenes (`00`, `01`...) keep them in order in the folder list.
 
@@ -46,6 +47,27 @@ DM Vault can be used from a website: the page offers **Open my campaign folder**
 - **Reload:** in the sidebar under Tools. Use it after editing notes in Obsidian or another app.
 - **Offline:** the file needs no internet at all. Fonts are built in.
 - **Themes:** the light theme (near-white page, black text) is the default, even when the computer is in dark mode. *Dark / light mode* in the sidebar switches to the charcoal and gold theme; the choice is remembered.
+
+## Folders (sidebar)
+
+The *Folders* list in the sidebar is a tree:
+
+- **Open or close a folder:** click the small arrow `▸` in front of its name. Open folders show their sub-folders and notes; the note you are reading is in **bold**, and its folders open by themselves.
+- **Folder page:** click the folder's name (sub-folders, then its notes, and *New note here*).
+- **close all:** at the right of the *Folders* heading.
+- The numbers are how many notes a folder holds, sub-folders included. Open folders are remembered by the browser.
+
+**Order of the notes in a folder:**
+
+| Folder | Order | Example |
+|---|---|---|
+| Most file names start with a number | By file name, numbers counted properly (2 before 10) | `00 Overview`, `01 Brindle Village`, `02 The Charred Road`... |
+| Otherwise | Alphabetical by title | Monsters, Rules, NPCs |
+
+- The tree shows each note's **title** (its `# heading`), but a numbered folder is sorted by **file name**: that is how `00 Overview` comes first even though its title is *Chapter 1: The Ashen Hollow*.
+- Notes without a number in a numbered folder (like `Rumours`) come last.
+- **Your own order:** give notes an `order:` property (`order: 1`, `order: 2`...). A folder with at least one `order:` is sorted by it; notes without one come after.
+- Sub-folders are sorted the same way: `Chapter 2` comes before `Chapter 10`.
 
 ## Top bar
 
@@ -144,7 +166,8 @@ From left to right, the bar shows:
 - **Name suggestions:** start typing a name and the matching monster notes appear under the box, with their CR, HP and initiative bonus (`gob` → Goblin Boss, Goblin Minion, Goblin Warrior...). If the name is already typed in full, Enter adds it directly. Click one, or use `↑` `↓` and `Enter` (or `Tab`); the cursor then jumps to the initiative box. `Esc` closes the list. In *Player* mode, the suggestions are the players you added before. Groups work too: type `gob x3` and pick Goblin Warrior.
 - **Monster / Player:** click the switch to change it. It stays on your last choice.
 - **Several at once:** `Goblin x3` adds Goblin 1, 2 and 3. With `+2`, each one rolls its own initiative; with a total, they all share it.
-- **Numbering continues:** adding goblins after Goblin 3 gives Goblin 4, and adding a name that is already there numbers it.
+- **Numbering continues:** adding goblins after Goblin 3 gives Goblin 4, and adding a name that is already there numbers both (*Lich* becomes *Lich 1*, the new one *Lich 2*).
+- **From a note:** click the Initiative bonus of a stat block, or the `init:` of an NPC's infobox (see *Monsters*).
 
 **Changing a number:** click any number in the track, type the new one, then Enter or click elsewhere. The track re-sorts right away. For a monster, typing `+2` there rerolls it.
 
@@ -299,6 +322,25 @@ The `Monsters` folder holds the **341 monsters of the SRD 5.2** (the free rules 
 - **Accuracy:** the monsters come from a community transcription of the SRD. It is thorough, but if you spot a difference with the book, correct the note: it is a plain text file.
 - **Licence:** the SRD is free to use and share under Creative Commons (CC BY 4.0) as long as the credit stays: see [[About the SRD]], and the source line at the bottom of each monster.
 
+## Spells, magic items and feats (SRD 5.2)
+
+| Folder | Content | Sorted by |
+|---|---|---|
+| `Spells` | 339 spells | `Cantrips`, `Level 1` ... `Level 9` |
+| `Items` | 262 magic items | `Common`, `Uncommon`, `Rare`, `Very Rare`, `Legendary`, `Artifact`, `Varies` |
+| `Feats` | 17 feats | `Origin`, `General`, `Fighting Style`, `Epic Boon` |
+
+- **Cards:** each note starts with a card laid out like the 2024 books. A spell shows *Level 3 Evocation (Sorcerer, Wizard)* then Casting Time, Range, Components, Duration; an item *Wondrous Item, Uncommon (Requires Attunement)*; a feat *General Feat (Prerequisite: Level 4+)*.
+- **Linked from the monsters:** the spell lists of spellcasters (and "casts *Counterspell*" in their actions) link to the spells. Click one: it opens in the pin panel, next to the monster.
+- **Conditions** mentioned in spells, items and feats link to their rule note.
+- **Dice** in the texts (8d6 Fire damage) are clickable, like everywhere.
+- **Your own:** the `Spell`, `Item` and `Feat` templates (in `templates`) are ready for homebrew or the PHB content your players use.
+- **Magic items to check:** 27 items had a table damaged in the source data; their note starts with a warning. Correct them from the book if you use them.
+
+### Show to players (pin panel)
+
+A pinned **spell, item, feat or rule** has a **Show to players** button next to its title: it appears as a card on the player screen (title, card, text), with a font size that adapts to fit the screen. Monsters and NPCs do not have this button, because their notes hold secrets (show their picture instead).
+
 ## Monsters (stat blocks)
 
 A note with `type: monster` in its properties is shown as a stat block laid out like the 2024 books. The numbers go in the properties, the traits and actions in the text:
@@ -344,7 +386,8 @@ image:
 
 - **The layout:** AC and Initiative, HP, Speed; the six abilities in two tables with their **MOD** and **SAVE** (a proficient save, listed in `saves:`, is in bold); then Skills, Vulnerabilities, Resistances, Immunities (damage; conditions), Gear, Senses, Languages and CR (XP, or XP in lair; PB).
 - **Calculated for you:** modifiers, saves that are not proficient, PB from the CR, and the Initiative from DEX when `init:` is empty.
-- **Clickable rolls:** every MOD and SAVE, the Initiative, the skills, `Attack Roll: +4` (and the old `+4 to hit`), damage like `1d6 + 2`, `(Recharge 5–6)` and the HP formula.
+- **Add to the initiative:** click the **Initiative** bonus (`+2`): the monster joins the initiative bar with d20 + that bonus, numbered if it is already there (*Lich 1*, *Lich 2*), with its HP. The bar opens if it was hidden. NPC notes with an `init:` property have the same link in their infobox.
+- **Clickable rolls:** every MOD and SAVE, the skills, `Attack Roll: +4` (and the old `+4 to hit`), damage like `1d6 + 2`, `(Recharge 5–6)` and the HP formula.
 - **Empty properties** are simply not shown.
 - **Sections:** Traits, Actions, Bonus Actions, Reactions, Legendary Actions are normal `##` headings: add any you need (Lair Actions...).
 - **Image:** `image:` is the file name of a picture anywhere in the campaign folder. Without it, an image named like the note is used (`goblin-warrior.jpg`). It is shown at the top of the stat block.
@@ -454,16 +497,20 @@ Footnotes, underlined (setext) headings, Mermaid diagrams (shown as code), Datav
 - [x] Monster stat blocks and pin panel, auto-pin on the monster's turn
 - [x] Player screen (images and player notes on a second screen)
 - [x] SRD 5.2 bestiary (341 monsters, 15 conditions, 2024 rules)
-- [ ] SRD 5.2 spells, magic items and feats, and *Show to players* from the pin panel
+- [x] SRD 5.2 spells, magic items and feats, and *Show to players* from the pin panel
+- [ ] Generator engine: NPCs, merchants, loot
+- [ ] Encounter builder (2024 XP budget)
 - [x] Player notes (mark as given)
-- [ ] Chapter checkboxes (mark a chapter done)
-- [ ] Loot table generator
-- [ ] NPC and merchant generator
+- [ ] Chapter progress (mark scenes and chapters as played)
+- [ ] Session log
 
 ## Changelog
 
 | Version | Change |
 |---|---|
+| 0.25 | Spells (339), magic items (262) and feats (17) of the SRD 5.2 with cards; spells linked from monsters; *Show to players* in the pin panel; click a monster's (or NPC's) Initiative to add it to the initiative bar; Spell, Item, Feat templates |
+| 0.24 | Tagline under the site name: laforest.art |
+| 0.23 | Sidebar: folder tree with arrows (open/close, remembered, follows the note you read), notes in chapter order (00, 01...) or alphabetical, `order:` property, better folder pages |
 | 0.22 | Online: *Try the example campaign* (read-only, loaded from GitHub Pages), Save → GitHub download, security policy, safer links |
 | 0.21 | 2024 rules: SRD 5.2 bestiary (341 monsters) and conditions, 2024 stat block layout (Initiative, MOD/SAVE, Bonus Actions, Gear), 2024 condition reminders, sample chapter uses the Goblin Warrior |
 | 0.20 | Bestiary: the 334 SRD monsters sorted by type, the 15 SRD conditions as rule notes, pictures found by name |

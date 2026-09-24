@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Slowing Breath or (B) Spellcasting to cast Mind Spike (level 5 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Slowing Breath or (B) Spellcasting to cast [[Mind Spike]] (level 5 version).
 
 **Rend.** *Melee Attack Roll:* +15, reach 15 ft. *Hit:* 19 (2d10 + 8) Slashing damage plus 9 (2d8) Acid damage.
 
@@ -46,8 +46,8 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21):
 
-- **At Will:** *Detect Magic*, *Mind Spike* (level 5 version), *Minor Illusion*, *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
-- **1/Day Each:** *Greater Restoration*, *Major Image*, *Project Image*
+- **At Will:** *[[Detect Magic]]*, *[[Mind Spike]]* (level 5 version), *[[Minor Illusion]]*, *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
+- **1/Day Each:** *[[Greater Restoration]]*, *[[Major Image]]*, *[[Project Image]]*
 
 ## Legendary Actions
 
@@ -55,7 +55,7 @@ tags: [monster, dragon, srd]
 
 **Giggling Magic.** *Charisma Saving Throw:* DC 21, one creature the dragon can see within 120 feet. *Failure:* 31 (9d6) Psychic damage. Until the end of its next turn, the target rolls 1d8 whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
-**Mind Jolt.** The dragon uses Spellcasting to cast Mind Spike (level 4 version). The dragon can’t take this action again until the start of its next turn.
+**Mind Jolt.** The dragon uses Spellcasting to cast [[Mind Spike]] (level 4 version). The dragon can’t take this action again until the start of its next turn.
 
 **Spike (level 5 version).** The dragon can’t take this action again until the start of its next turn.
 

@@ -44,12 +44,12 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The deva casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):
 
-- **At Will:** *Detect Evil and Good*, *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
-- **1/Day Each:** *Commune*, *Raise Dead*
+- **At Will:** *[[Detect Evil and Good]]*, *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
+- **1/Day Each:** *[[Commune]]*, *[[Raise Dead]]*
 
 ## Bonus Actions
 
-**Divine Aid (2/Day).** The deva casts Cure Wounds, Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.
+**Divine Aid (2/Day).** The deva casts [[Cure Wounds]], [[Lesser Restoration]], or Remove Curse, using the same spellcasting ability as Spellcasting.
 
 ---
 

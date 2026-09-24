@@ -42,17 +42,17 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 17):
 
-- **At Will:** *Detect Magic*, *Detect Thoughts*, *Disguise Self*, *Invisibility*, *Light*, *Mage Armor* (included in AC), *Mage Hand*, *Prestidigitation*
-- **2/Day Each:** *Fly*, *Lightning Bolt* (level 7 version)
-- **1/Day Each:** *Cone of Cold* (level 9 version), *Mind Blank* (cast before combat), *Scrying*, *Teleport*
+- **At Will:** *[[Detect Magic]]*, *[[Detect Thoughts]]*, *[[Disguise Self]]*, *[[Invisibility]]*, *[[Light]]*, *[[Mage Armor]]* (included in AC), *[[Mage Hand]]*, *[[Prestidigitation]]*
+- **2/Day Each:** *[[Fly]]*, *[[Lightning Bolt]]* (level 7 version)
+- **1/Day Each:** *[[Cone of Cold]]* (level 9 version), *[[Mind Blank]]* (cast before combat), *[[Scrying]]*, *[[Teleport]]*
 
 ## Bonus Actions
 
-**Misty Step (3/Day).** The mage casts Misty Step, using the same spellcasting ability as Spellcasting.
+**Misty Step (3/Day).** The mage casts [[Misty Step]], using the same spellcasting ability as Spellcasting.
 
 ## Reactions
 
-**Protective Magic (3/Day).** The archmage casts Counterspell or Shield in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
+**Protective Magic (3/Day).** The archmage casts [[Counterspell]] or [[Shield]] in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
 
 ---
 

@@ -44,7 +44,7 @@ tags: [monster, fiend, srd]
 
 **Tail.** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (3d6 + 5) Bludgeoning damage plus 18 (4d8) Cold damage.
 
-**Ice Wall (Recharge 6).** The devil casts Wall of Ice (level 8 version), requiring no spell components and using Intelligence as the spellcasting ability (spell save DC 17).
+**Ice Wall (Recharge 6).** The devil casts [[Wall of Ice]] (level 8 version), requiring no spell components and using Intelligence as the spellcasting ability (spell save DC 17).
 
 ---
 

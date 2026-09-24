@@ -46,8 +46,8 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):
 
-- **At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illusion*, *Prestidigitation*
-- **1/Day Each:** *Dispel Magic*, *Legend Lore*, *Locate Object*, *Plane Shift*, *Remove Curse*, *Tongues*
+- **At Will:** *[[Detect Magic]]*, *[[Identify]]*, *[[Mage Hand]]*, *[[Minor Illusion]]*, *[[Prestidigitation]]*
+- **1/Day Each:** *[[Dispel Magic]]*, *[[Legend Lore]]*, *[[Locate Object]]*, *[[Plane Shift]]*, *[[Remove Curse]]*, *[[Tongues]]*
 
 ## Legendary Actions
 

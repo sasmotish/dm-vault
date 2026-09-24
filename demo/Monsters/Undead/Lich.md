@@ -46,13 +46,13 @@ tags: [monster, undead, srd]
 
 **Spellcasting.** The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 20):
 
-- **At Will:** *Detect Magic*, *Detect Thoughts*, *Dispel Magic*, *Fireball* (level 5 version), *Invisibility*, *Lightning Bolt* (level 5 version), *Mage Hand*, *Prestidigitation*
-- **2/Day Each:** *Animate Dead*, *Dimension Door*, *Plane Shift*
-- **1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power Word Kill*, *Scrying*
+- **At Will:** *[[Detect Magic]]*, *[[Detect Thoughts]]*, *[[Dispel Magic]]*, *[[Fireball]]* (level 5 version), *[[Invisibility]]*, *[[Lightning Bolt]]* (level 5 version), *[[Mage Hand]]*, *[[Prestidigitation]]*
+- **2/Day Each:** *[[Animate Dead]]*, *[[Dimension Door]]*, *[[Plane Shift]]*
+- **1/Day Each:** *[[Chain Lightning]]*, *[[Finger of Death]]*, *[[Power Word Kill]]*, *[[Scrying]]*
 
 ## Reactions
 
-**Protective Magic.** The lich casts Counterspell or Shield in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
+**Protective Magic.** The lich casts [[Counterspell]] or [[Shield]] in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
 
 ## Legendary Actions
 
@@ -62,7 +62,7 @@ tags: [monster, undead, srd]
 
 **Disrupt Life.** *Constitution Saving Throw:* DC 20, each creature that isn’t an Undead in a 20-foot Emanation originating from the lich. *Failure:* 31 (9d6) Necrotic damage. *Success:* Half damage. *Failure or Success:* The lich can’t take this action again until the start of its next turn.
 
-**Frightening Gaze.** The lich casts Fear, using the same spellcasting ability as Spellcasting. The lich can’t take this action again until the start of its next turn.
+**Frightening Gaze.** The lich casts [[Fear]], using the same spellcasting ability as Spellcasting. The lich can’t take this action again until the start of its next turn.
 
 ---
 

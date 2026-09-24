@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Scorching Ray.
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast [[Scorching Ray]].
 
 **Rend.** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 13 (1d10 + 8) Slashing damage plus 5 (2d4) Fire damage.
 
@@ -44,16 +44,16 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 20, +12 to hit with spell attacks):
 
-- **At Will:** *Command* (level 2 version), *Detect Magic*, *Scorching Ray*
-- **1/Day Each:** *Fireball*
+- **At Will:** *[[Command]]* (level 2 version), *[[Detect Magic]]*, *[[Scorching Ray]]*
+- **1/Day Each:** *[[Fireball]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the adult red dragon can expend a use to take one of the following actions. The adult red dragon regains all expended uses at the start of each of its turns.
 
-**Commanding Presence.** The dragon uses Spellcasting to cast Command (level 2 version). The dragon can’t take this action again until the start of its next turn.
+**Commanding Presence.** The dragon uses Spellcasting to cast [[Command]] (level 2 version). The dragon can’t take this action again until the start of its next turn.
 
-**Fiery Rays.** The dragon uses Spellcasting to cast Scorching Ray. The dragon can’t take this action again until the start of its next turn.
+**Fiery Rays.** The dragon uses Spellcasting to cast [[Scorching Ray]]. The dragon can’t take this action again until the start of its next turn.
 
 **Pounce.** The dragon moves up to half its Speed, and it makes one Rend attack.
 

@@ -38,7 +38,7 @@ tags: [monster, fiend, srd]
 
 **Sting.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Piercing damage plus 7 (2d6) Poison damage.
 
-**Invisibility.** The imp casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.
+**Invisibility.** The imp casts [[Invisibility]] on itself, requiring no spell components and using Charisma as the spellcasting ability.
 
 **Shape-Shift.** The imp shape-shifts to resemble a rat (Speed 20 ft.), a raven (20 ft., Fly 60 ft.), or a spider (20 ft., Climb 20 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed.
 

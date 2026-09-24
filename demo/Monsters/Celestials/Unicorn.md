@@ -46,8 +46,8 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The unicorn casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 14):
 
-- **At Will:** *Detect Evil and Good*, *Druidcraft*
-- **1/Day Each:** *Calm Emotions*, *Dispel Evil and Good*, *Entangle*, *Pass without Trace*, *Word of Recall*
+- **At Will:** *[[Detect Evil and Good]]*, *[[Druidcraft]]*
+- **1/Day Each:** *[[Calm Emotions]]*, *[[Dispel Evil and Good]]*, *[[Entangle]]*, *[[Pass without Trace]]*, *[[Word of Recall]]*
 
 ## Legendary Actions
 

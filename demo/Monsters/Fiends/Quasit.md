@@ -38,7 +38,7 @@ tags: [monster, fiend, srd]
 
 **Rend.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage, and the target has the [[Poisoned]] condition until the start of the quasit’s next turn.
 
-**Invisibility.** The quasit casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.
+**Invisibility.** The quasit casts [[Invisibility]] on itself, requiring no spell components and using Charisma as the spellcasting ability.
 
 **Scare (1/Day).** *Wisdom Saving Throw:* DC 10, one creature within 20 feet. *Failure:* The target has the [[Frightened]] condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 

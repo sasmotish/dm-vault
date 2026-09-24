@@ -40,8 +40,8 @@ tags: [monster, fiend, srd]
 
 **Spellcasting.** The lamia casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):
 
-- **At Will:** *Disguise Self* (can appear as a Large or Medium biped), *Minor Illusion*
-- **1/Day Each:** *Geas*, *Major Image*, *Scrying*
+- **At Will:** *[[Disguise Self]]* (can appear as a Large or Medium biped), *[[Minor Illusion]]*
+- **1/Day Each:** *[[Geas]]*, *[[Major Image]]*, *[[Scrying]]*
 
 ## Bonus Actions
 

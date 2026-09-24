@@ -40,12 +40,12 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):
 
-- **At Will:** *Light*, *Thaumaturgy*
-- **1/Day Each:** *Spirit Guardians*
+- **At Will:** *[[Light]]*, *[[Thaumaturgy]]*
+- **1/Day Each:** *[[Spirit Guardians]]*
 
 ## Bonus Actions
 
-**Divine Aid (3/Day).** The priest casts Bless, Dispel Magic, Healing Word, or Lesser Restoration, using the same spellcasting ability as Spellcasting.
+**Divine Aid (3/Day).** The priest casts [[Bless]], [[Dispel Magic]], [[Healing Word]], or Lesser Restoration, using the same spellcasting ability as Spellcasting.
 
 ---
 

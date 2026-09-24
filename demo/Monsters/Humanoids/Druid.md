@@ -40,9 +40,9 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):
 
-- **At Will:** *Druidcraft*, *Speak with Animals*
-- **2/Day Each:** *Entangle*, *Thunderwave*
-- **1/Day Each:** *Animal Messenger*, *Longstrider*, *Moonbeam*
+- **At Will:** *[[Druidcraft]]*, *[[Speak with Animals]]*
+- **2/Day Each:** *[[Entangle]]*, *[[Thunderwave]]*
+- **1/Day Each:** *[[Animal Messenger]]*, *[[Longstrider]]*, *[[Moonbeam]]*
 
 ---
 

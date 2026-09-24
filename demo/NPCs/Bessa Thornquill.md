@@ -3,6 +3,7 @@ type: merchant
 ancestry: halfling
 shop: general goods
 location: Brindle
+init: +2
 attitude: friendly, sharp with numbers
 voice: calls everyone "petal"
 gold_on_hand: 3d10 × 10 gp

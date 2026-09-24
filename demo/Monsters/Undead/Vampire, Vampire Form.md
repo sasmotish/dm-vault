@@ -58,7 +58,7 @@ tags: [monster, undead, srd]
 
 ## Bonus Actions
 
-**Charm (Recharge 5–6).** The vampire casts Charm Person, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17), and the duration is 24 hours. The [[Charmed]] target is a willing recipient of the vampire’s Bite, the damage of which doesn’t end the spell. When the spell ends, the target is unaware it was Charmed by the vampire.
+**Charm (Recharge 5–6).** The vampire casts [[Charm Person]], requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17), and the duration is 24 hours. The [[Charmed]] target is a willing recipient of the vampire’s Bite, the damage of which doesn’t end the spell. When the spell ends, the target is unaware it was Charmed by the vampire.
 
 **Shape-Shift.** If the vampire isn’t in sunlight or running water, it shape-shifts into a Tiny bat (Speed 5 ft., Fly Speed 30 ft.) or a Medium cloud of mist (Speed 5 ft., Fly Speed 20 ft. [hover]), or it returns to its vampire form. Anything it is wearing transforms with it. While in bat form, the vampire can’t speak. Its game statistics, other than its size and Speed, are unchanged. While in mist form, the vampire can’t take any actions, speak, or manipulate objects. It is weightless and can enter an enemy’s space and stop there. If air can pass through a space, the mist can do so, but it can’t pass through liquid. It has Resistance to all damage, except the damage it takes from sunlight.
 
@@ -66,7 +66,7 @@ tags: [monster, undead, srd]
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the vampire, vampire form can expend a use to take one of the following actions. The vampire, vampire form regains all expended uses at the start of each of its turns.
 
-**Beguile.** The vampire casts Command, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17). The vampire can’t take this action again until the start of its next turn.
+**Beguile.** The vampire casts [[Command]], requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17). The vampire can’t take this action again until the start of its next turn.
 
 **Deathless Strike.** The vampire moves up to half its Speed, and it makes one Grave Strike attack.
 

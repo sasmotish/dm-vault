@@ -48,7 +48,7 @@ tags: [monster, monstrosity, srd]
 
 ## Bonus Actions
 
-**Magic of the Spider Queen (Recharge 5–6).** The drider casts Darkness, Faerie Fire, or Web, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).
+**Magic of the Spider Queen (Recharge 5–6).** The drider casts [[Darkness]], [[Faerie Fire]], or Web, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).
 
 ---
 

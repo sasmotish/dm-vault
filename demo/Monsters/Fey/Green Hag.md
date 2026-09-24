@@ -46,7 +46,7 @@ tags: [monster, fey, srd]
 
 **Spellcasting.** The hag casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 
-- **At Will:** *Dancing Lights*, *Disguise Self* (24-hour duration), *Invisibility* (self only, and the hag leaves no tracks while Invisible), *Minor Illusion*, *Ray of Sickness* (level 3 version)
+- **At Will:** *[[Dancing Lights]]*, *[[Disguise Self]]* (24-hour duration), *[[Invisibility]]* (self only, and the hag leaves no tracks while Invisible), *[[Minor Illusion]]*, *[[Ray of Sickness]]* (level 3 version)
 
 ---
 

@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Slowing Breath or (B) Spellcasting to cast Mind Spike (level 4 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Slowing Breath or (B) Spellcasting to cast [[Mind Spike]] (level 4 version).
 
 **Rend.** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 17 (2d10 + 6) Slashing damage plus 4 (1d8) Acid damage.
 
@@ -46,8 +46,8 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):
 
-- **At Will:** *Detect Magic*, *Mind Spike* (level 4 version), *Minor Illusion*, *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
-- **1/Day Each:** *Greater Restoration*, *Major Image*
+- **At Will:** *[[Detect Magic]]*, *[[Mind Spike]]* (level 4 version), *[[Minor Illusion]]*, *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
+- **1/Day Each:** *[[Greater Restoration]]*, *[[Major Image]]*
 
 ## Legendary Actions
 
@@ -55,7 +55,7 @@ tags: [monster, dragon, srd]
 
 **Giggling Magic.** *Charisma Saving Throw:* DC 17, one creature the dragon can see within 90 feet. *Failure:* 24 (7d6) Psychic damage. Until the end of its next turn, the target rolls 1d6 whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
-**Mind Jolt.** The dragon uses Spellcasting to cast Mind Spike (level 4 version). The dragon can’t take this action again until the start of its next turn.
+**Mind Jolt.** The dragon uses Spellcasting to cast [[Mind Spike]] (level 4 version). The dragon can’t take this action again until the start of its next turn.
 
 **Pounce.** The dragon moves up to half its Speed, and it makes one Rend attack.
 

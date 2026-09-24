@@ -1,0 +1,22 @@
+---
+type: spell
+level: 2
+school: Divination
+casting_time: 1 minute
+ritual: yes
+range: Self
+components: V, S, M ((specially marked sticks, bones, cards, or other divinatory tokens worth 25+ GP)
+duration: Instantaneous
+concentration: no
+classes: Cleric, Druid, Wizard
+tags: [spell, divination, level-2, srd]
+---
+# Augury
+
+You receive an omen from an otherworldly entity about the results of a course of action that you plan to take within the next 30 minutes. The GM chooses the omen from the Omens table. Omens Omen    For Results That Will Be ... Woe    Bad  Weal and woe    Good and bad     Indifference    Neither good nor bad The spell doesn't account for circumstances, such as other spells, that might change the results.
+
+If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.
+
+---
+
+*Source: System Reference Document 5.2, CC BY 4.0. See [[About the SRD]].*

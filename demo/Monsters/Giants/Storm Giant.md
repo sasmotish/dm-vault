@@ -46,8 +46,8 @@ tags: [monster, giant, srd]
 
 **Spellcasting.** The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):
 
-- **At Will:** *Detect Magic*, *Light*
-- **1/Day Each:** *Control Weather*
+- **At Will:** *[[Detect Magic]]*, *[[Light]]*
+- **1/Day Each:** *[[Control Weather]]*
 
 ---
 

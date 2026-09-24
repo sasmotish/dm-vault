@@ -38,7 +38,7 @@ tags: [monster, elemental, srd]
 
 **Claw.** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 2 (1d4) Cold damage.
 
-**Fog Cloud (1/Day).** The mephit casts Fog Cloud, requiring no spell components and using Charisma as the spellcasting ability.
+**Fog Cloud (1/Day).** The mephit casts [[Fog Cloud]], requiring no spell components and using Charisma as the spellcasting ability.
 
 **Frost Breath (Recharge 6).** *Constitution Saving Throw:* DC 10, each creature in a 15-foot Cone. *Failure:* 7 (3d4) Cold damage. *Success:* Half damage.
 

@@ -82,6 +82,7 @@
                                [data-theme='dark'] for the dark theme).
    Change the page width       .layout (max-width) and #side (width) in the CSS.
    Add a sidebar link          renderSide() in section 10: add an <a href="#/...">.
+   Order of notes in folders   orderNotes() in section 10 (or an 'order:' property in the notes).
    Add a callout type          the CO table in section 5:  name: [color, icon].
    Add a callout color         add a .co-<name> rule in the CSS (copy .co-teal) and use it in CO.
    Hide a property (infobox)   the list ['tags', 'aliases', ...] inside renderBody().
@@ -349,6 +350,66 @@ button:hover {
   display: block;
   padding: 2px 0;
   line-height: 1.4;
+}
+/* FOLDER TREE: the arrow turns when the folder is open; notes are indented under their folder, and the
+   note being read is in bold. --d is the depth of the folder (0 at the top). */
+#side .tr-h {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.tr-none {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: italic 12px var(--serif);
+  color: var(--muted);
+}
+.tr-none:hover {
+  color: var(--link);
+  background: none;
+}
+.tr-row {
+  display: flex;
+  align-items: center;
+  padding-left: calc(var(--d) * 12px);
+}
+.tr-arrow {
+  flex: none;
+  width: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1;
+  transition: transform 0.15s;
+}
+.tr-arrow:hover {
+  background: none;
+  color: var(--text);
+}
+.tr-arrow[aria-expanded='true'] {
+  transform: rotate(90deg);
+}
+#side .tr-row a {
+  flex: 1;
+  min-width: 0;
+}
+#side a.tr-n {
+  padding-left: calc(var(--d) * 12px + 18px);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#side a.tr-n.cur {
+  font-weight: 700;
+  color: var(--text);
+}
+/* Folder page of a sequence folder (00, 01, 02...): a list in file order. */
+.body ul.seq li {
+  padding: 1px 0;
 }
 #side .cnt {
   color: var(--muted);
@@ -1500,6 +1561,9 @@ h1.title {
   border-left-color: var(--link) !important;
 }
 /* Error message: a small note that hangs under the bar for a few seconds. */
+.ib-err.ok-note {
+  color: var(--text);
+}
 .ib-err .btn {
   margin-left: 6px;
   padding: 0 8px;
@@ -1797,6 +1861,33 @@ html.init-on {
   border: 1px solid var(--border);
   border-radius: 2px;
   padding: 1px 4px;
+}
+/* Right side of a pinned note's title: 'Show to players' (spells, items, feats, rules) and 'Open as page'. */
+.pin-acts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pin-show {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  padding: 1px 7px;
+  white-space: nowrap;
+}
+.pin-show .wx-ic {
+  width: 14px;
+  height: 14px;
+  color: inherit;
+}
+/* The Initiative of a stat block (or the init of an NPC): click to add it to the initiative bar. */
+a.init-add {
+  border-bottom: 1px dotted var(--rubric);
+}
+a.init-add:hover {
+  background: var(--hl);
+  text-decoration: none;
 }
 /* The Pin button next to the Note / Edit / Source tabs. */
 .pin-btn {
@@ -2119,7 +2210,7 @@ html.init-on {
      #menuBtn (hamburger) is only visible on small screens; it opens the sidebar. -->
 <header id="top">
   <button id="menuBtn" aria-label="Menu">&#9776;</button>
-  <a class="logo" href="#/"><span id="siteName">Notes</span><small>...</small></a>
+  <a class="logo" href="#/"><span id="siteName">Notes</span><small>laforest.art</small></a>
   <div id="wx"></div>
   <div id="dice"></div>
   <div id="init"></div>
@@ -3132,6 +3223,11 @@ html.init-on {
     renderPlayerBtn();
     // The pin panel stays; it is redrawn in case the notes changed (section 9F).
     renderPin();
+    // The folder tree shows where you are (section 10).
+    if (S.notes.length) {
+      if (S.path && $('#content .article')) treeReveal(S.path);
+      renderSide();
+    }
   }
   // Alphabetical list of notes grouped by first letter (in columns). With withDate = true it shows one
   // line per note with the modified date instead.
@@ -3222,15 +3318,19 @@ html.init-on {
       if (['tags', 'aliases', 'cssclasses', 'cssclass', 'publish', 'image'].includes(k.toLowerCase())) continue;
       const val = Array.isArray(v) ? v.join(', ') : String(v);
       if (!val) continue;
+      // An 'init:' property (NPCs...) can be clicked to add the character to the initiative (section 9D).
+      const isInit = k.toLowerCase() === 'init' && /^[+\-\u2212]?\d+$/.test(val.trim());
       rows.push(
-        `<tr><th>${esc(cap(k.replace(/[_-]/g, ' ')))}</th><td>${inline(val, { note, tags: null })}</td></tr>`,
+        `<tr><th>${esc(cap(k.replace(/[_-]/g, ' ')))}</th><td>${isInit ? initAddLink(note, monsterInit(note)) : inline(val, { note, tags: null })}</td></tr>`,
       );
     }
-    // Monster notes show a stat block instead of the infobox (section 9F).
+    // Monster notes show a stat block instead of the infobox; spells, items and feats a card (section 9F).
     const info =
       noteType(note) === 'monster'
         ? statBlockHtml(note)
-        : rows.length
+        : CARD_TYPES.includes(noteType(note))
+          ? cardHtml(note)
+          : rows.length
           ? `<table class="infobox"><caption>${esc(note.title)}</caption>${
               noteImage(note)
                 ? `<tr><td colspan="2" class="ibx-img">${noteImage(note).url ? `<img src="${esc(noteImage(note).url)}" alt="${esc(note.title)}">` : imgHtml(noteImage(note).name, note.title, 0, note)}</td></tr>`
@@ -3254,7 +3354,7 @@ html.init-on {
       ? `<div class="back"><h2>What links here</h2>${bl.map((n) => `<div>${noteLink(n)}</div>`).join('')}</div>`
       : '';
     setContent(`${tabs(note, 'n')}<h1 class="title">${esc(note.title)}</h1><div class="sub">From your notes &middot; ${esc(note.path)}${note.mtime ? ' &middot; last modified ' + esc(fmtDate(note.mtime)) : ''}</div>
-   <div class="body article${noteType(note) === 'monster' ? ' sb-page' : ''}">${r.html}</div>${cats}${back}`);
+   <div class="body article${noteType(note) === 'monster' || CARD_TYPES.includes(noteType(note)) ? ' sb-page' : ''}">${r.html}</div>${cats}${back}`);
   }
   // The Source tab: the raw Markdown of the note in a code block (with a Copy button).
   function viewSource(note) {
@@ -4152,10 +4252,11 @@ clear        empty the log</pre>`;
   }
   // Shows a short note under the bar for a few seconds (an error, or 'removed' with an Undo button).
   let initErrTimer = null;
-  function initNote(html, ms) {
+  function initNote(html, ms, ok) {
     const el = $('#iberr');
     if (!el) return;
     el.innerHTML = html;
+    el.classList.toggle('ok-note', !!ok); // information (black) rather than an error (red)
     clearTimeout(initErrTimer);
     initErrTimer = setTimeout(() => (el.innerHTML = ''), ms || 4000);
   }
@@ -4221,6 +4322,14 @@ clear        empty the log</pre>`;
       else if (c.name.toLowerCase() === name.toLowerCase()) start = Math.max(start, 2);
     }
     const numbered = count > 1 || start > 1;
+    // A creature already there without a number becomes 'Name 1' when copies join it (Lich -> Lich 1, Lich 2).
+    if (numbered) {
+      const plain = INIT.list.find((c) => c.name.toLowerCase() === name.toLowerCase());
+      if (plain) {
+        plain.name = name + ' 1';
+        start = Math.max(start, 2);
+      }
+    }
     const hp = mnote ? monsterHp(mnote) : null;
     // Players' names are remembered for the name suggestions of the next fights.
     if (kind === 'player') INIT.known = [...new Set([name].concat(INIT.known || []))].slice(0, 30);
@@ -4271,7 +4380,7 @@ clear        empty the log</pre>`;
       track.classList.add('ib-cool');
       setTimeout(() => track.classList.remove('ib-cool'), 700);
     }
-    initNote(`${esc(initUndo.c.name)} removed. <button type="button" class="btn" data-act="init-undo">Undo</button>`, 6000);
+    initNote(`${esc(initUndo.c.name)} removed. <button type="button" class="btn" data-act="init-undo">Undo</button>`, 6000, true);
   }
   // Puts the last removed creature back where it was (same turn and round as before).
   function initUndoDel() {
@@ -4283,6 +4392,30 @@ clear        empty the log</pre>`;
     initSave();
     initRefresh();
     initNote('');
+  }
+  // ADD FROM A NOTE: the Initiative of a stat block (or the 'init:' of an NPC's infobox) is a link that adds
+  // the creature to the initiative bar: it rolls d20 + that bonus, numbers the copies (Goblin Warrior 2...)
+  // and links a monster to its note (HP, auto-pin). The bar opens if it was hidden.
+  const initAddLink = (note, bonus) =>
+    `<a href="#" class="init-add" data-act="init-from-note" data-path="${esc(note.path)}" title="Add ${esc(note.title)} to the initiative (rolls d20${fmtBonus(bonus)})">${fmtBonus(bonus).replace('-', '\u2212')}</a>`;
+  function initAddFromNote(path) {
+    const note = getNote(path);
+    if (!note) return;
+    if (!INIT.show) {
+      INIT.show = true;
+      renderInit();
+    }
+    const kind = INIT.kind;
+    INIT.kind = 'monster'; // monsters and NPCs go in as 'monster' (red); the switch is put back after
+    $('#ibname').value = note.title;
+    $('#ibval').value = fmtBonus(monsterInit(note));
+    const before = INIT.list.length;
+    initAdd();
+    INIT.kind = kind;
+    initSave();
+    renderInit();
+    const c = INIT.list[INIT.list.length - 1];
+    if (INIT.list.length > before && c) initNote(`${esc(c.name)} added with ${esc(c.init)}.`, 3000, true);
   }
   // End of the fight: monsters leave, players stay with an empty initiative and no conditions, back to
   // round 1, bar hidden.
@@ -4665,7 +4798,10 @@ clear        empty the log</pre>`;
   // =============================================================================
 
   // Note types that open in the pin panel when their link is clicked. Add yours here.
-  const PIN_TYPES = ['monster', 'npc', 'merchant', 'rule', 'item', 'spell', 'location', 'handout'];
+  const PIN_TYPES = ['monster', 'npc', 'merchant', 'rule', 'item', 'spell', 'feat', 'location', 'handout'];
+  // Types that can be shown on the player screen from the pin panel (never monsters or NPCs: their notes hold
+  // secrets).
+  const SHOW_TYPES = ['spell', 'item', 'feat', 'rule', 'handout'];
   const PIN_KEY = 'dm-pins';
   const PIN_ICON = wxSvg('<path d="M9 3h6l-1 6 4 4H6l4-4z"/><path d="M12 13v8"/>');
   // PIN = { items: [paths of the pinned notes], active: path of the tab shown, width: in pixels }
@@ -4777,8 +4913,42 @@ clear        empty the log</pre>`;
         : `<div class="hint">Image ${esc(pic.name)} not found in the campaign folder.</div>`;
     const rule = '<div class="sb-rule"></div>';
     return `<div class="sb">${img}${sub ? `<div class="sb-sub">${esc(sub)}</div>` : ''}${rule}${
-      v('ac') ? `<div class="sb-line"><b>AC</b> ${inl('ac')}<span class="sb-sep"></span><b>Initiative</b> ${roll(init, 'Initiative')} (${10 + init})</div>` : ''
+      v('ac') ? `<div class="sb-line"><b>AC</b> ${inl('ac')}<span class="sb-sep"></span><b>Initiative</b> ${initAddLink(note, init)} (${10 + init})</div>` : ''
     }${line('HP', inl('hp'))}${line('Speed', inl('speed'))}${abil ? rule + abil : ''}${rule}${line('Skills', v('skills') ? linkBonuses(v('skills'), '') : '')}${line('Vulnerabilities', inl('vulnerabilities'))}${line('Resistances', inl('resistances'))}${line('Immunities', imm ? inline(imm, { note, tags: null }) : '')}${line('Gear', inl('gear'))}${line('Senses', inl('senses'))}${line('Languages', inl('languages'))}${crHtml}</div>`;
+  }
+
+  // SPELL, ITEM AND FEAT CARDS: notes with type: spell / item / feat show a short card at the top (instead
+  // of the infobox), laid out like the 2024 books:
+  //   spell  'Level 3 Evocation (Sorcerer, Wizard)', then Casting Time, Range, Components, Duration
+  //   item   'Wondrous Item, Rare (Requires Attunement)'
+  //   feat   'General Feat (Prerequisite: Level 4+, Strength or Dexterity 13+)'
+  const yes = (v) => /^(yes|true|y|oui)$/i.test(String(v).trim());
+  const CARD_TYPES = ['spell', 'item', 'feat'];
+  function cardHtml(note) {
+    const t = noteType(note),
+      v = (k) => fmGet(note, k);
+    const line = (label, val) => (val ? `<div class="sb-line"><b>${label}</b> ${inline(val, { note, tags: null })}</div>` : '');
+    let sub = '',
+      lines = '';
+    if (t === 'spell') {
+      const lvl = parseInt(v('level'), 10);
+      sub = (lvl === 0 ? `${v('school')} Cantrip` : `Level ${isNaN(lvl) ? '?' : lvl} ${v('school')}`) + (v('classes') ? ` (${v('classes')})` : '');
+      let dur = v('duration');
+      if (yes(v('concentration')) && dur && !/concentration/i.test(dur)) dur = 'Concentration, ' + dur;
+      lines =
+        line('Casting Time', v('casting_time') + (yes(v('ritual')) ? ' or Ritual' : '')) +
+        line('Range', v('range')) +
+        line('Components', v('components')) +
+        line('Duration', dur);
+    } else if (t === 'item') {
+      const att = v('attunement');
+      sub = [v('category'), v('rarity')].filter(Boolean).join(', ') + (yes(att) ? ' (Requires Attunement)' : att && !/^(no|false)$/i.test(att) ? ` (Requires Attunement ${att})` : '');
+    } else if (t === 'feat') {
+      sub = (v('category') ? v('category') + ' ' : '') + 'Feat' + (v('prerequisite') ? ` (Prerequisite: ${v('prerequisite')})` : '');
+    }
+    const pic = noteImage(note);
+    const img = pic && pic.url ? `<div class="sb-img"><img src="${esc(pic.url)}" alt="${esc(note.title)}"></div>` : '';
+    return `<div class="sb card">${img}<div class="sb-sub">${esc(sub)}</div>${lines ? '<div class="sb-rule"></div>' + lines : ''}</div>`;
   }
 
   // ---- Pin panel -----------------------------------------------------------------
@@ -4837,7 +5007,7 @@ clear        empty the log</pre>`;
         (n) => `<div class="pin-tab${n === active ? ' on' : ''}"><button type="button" class="pin-t" data-act="pin-show" data-path="${esc(n.path)}" title="${esc(n.title)}">${esc(n.title)}</button><button type="button" class="pin-x" data-act="pin-close" data-path="${esc(n.path)}" title="Unpin" aria-label="Unpin ${esc(n.title)}">&times;</button></div>`,
       )
       .join('')}</div>
-<div class="pin-body"><div class="pin-head"><span class="pin-title">${esc(active.title)}</span><a class="pin-open" href="${noteHref(active)}">Open as page</a></div>${pinCombatHtml(active)}<div class="body">${renderBody(active, { toc: false, idPrefix: 'pin-' }).html}</div></div>`;
+<div class="pin-body"><div class="pin-head"><span class="pin-title">${esc(active.title)}</span><span class="pin-acts">${SHOW_TYPES.includes(noteType(active)) ? `<button type="button" class="btn pin-show" data-act="pin-players" data-path="${esc(active.path)}" title="Show this card on the player screen">${PS_ICON} Show to players</button>` : ''}<a class="pin-open" href="${noteHref(active)}">Open as page</a></span></div>${pinCombatHtml(active)}<div class="body">${renderBody(active, { toc: false, idPrefix: 'pin-' }).html}</div></div>`;
     $('.pin-body', box).scrollTop = keep;
   }
   // When a monster's turn comes in the initiative bar, its stat block is pinned.
@@ -4903,7 +5073,12 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
 #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .35s}
 #stage.out{opacity:0}
 #stage img{max-width:100vw;max-height:100vh;object-fit:contain}
-.text{max-width:min(62rem,90vw);max-height:90vh;overflow:auto;padding:3rem;font:2rem/1.5 Alegreya,Georgia,serif}
+.card .sb{margin:0 0 1em}.card .sb-sub{font-style:italic;color:#b9b3a4}.card .sb-rule{border-top:2px solid #e3bd6b;opacity:.6;margin:.4em 0}
+.card .sb-line b,.card strong{color:#f3efe4}.card .sb-img img{max-height:30vh;max-width:100%;display:block;margin:0 auto .5em}
+.card .callout{border-left:4px solid #666;padding:.2em .8em;margin:.6em 0;background:#111}.card .ci{display:none}
+.card table{border-collapse:collapse;margin:.6em 0}.card td,.card th{border:1px solid #444;padding:.2em .6em}
+.card hr,.card .cats,.card em:last-child:only-child{display:none}
+.text{max-width:min(62rem,90vw);padding:2rem 3rem;font:2rem/1.45 Alegreya,Georgia,serif}
 .text h1{font:400 3rem/1.2 'IM Fell English',Georgia,serif;margin:0 0 1.2rem;color:#e3bd6b}
 .text p{margin:.6em 0}
 .text a{color:inherit;text-decoration:none}
@@ -4947,6 +5122,7 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
       d.write(psPage());
       d.close();
       // A click in the screen switches it to full screen (the browser only allows it after a click there).
+      w.addEventListener('resize', () => psFit(w));
       d.addEventListener('click', () => {
         if (!d.fullscreenElement && d.documentElement.requestFullscreen) d.documentElement.requestFullscreen().catch(() => {});
         const h = d.getElementById('hint');
@@ -4971,6 +5147,7 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
     st.classList.add('out');
     setTimeout(() => {
       st.innerHTML = html;
+      psFit(w);
       st.classList.remove('out');
     }, 180);
     PS.current = what;
@@ -5009,6 +5186,25 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
       const img = body.querySelector('img');
       if (img) psShowImage(img.src, title);
     }
+  }
+  // A card or a player note too long for the screen gets a smaller font until it fits (also when the screen
+  // window changes size, for example when it goes full screen).
+  function psFit(w) {
+    const el = w.document.querySelector('#stage .text');
+    if (!el) return;
+    let size = parseFloat(el.dataset.size || '2');
+    el.style.fontSize = size + 'rem';
+    while (el.scrollHeight > w.innerHeight * 0.92 && size > 0.8) {
+      size -= 0.1;
+      el.style.fontSize = size + 'rem';
+    }
+  }
+  // Shows a pinned spell, item, feat or rule on the player screen as a card: its title, its header card and
+  // its text. Long texts get a smaller font so they fit.
+  function psShowCard(note) {
+    if (!note) return;
+    const html = renderBody(note, { toc: false, idPrefix: 'ps-' }).html;
+    psStage(`<div class="text card" data-size="2"><h1>${esc(note.title)}</h1>${html}</div>`, note.title);
   }
   // Initiative: when a monster's turn comes and its note has an image, show it (screen open + Auto on).
   function psMonsterTurn(note) {
@@ -5089,6 +5285,84 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
   //   #/f/<folder>  #/t/<tag>  #/all  #/tags  #/s/<text>  #/missing/<name>  #/tool/<id>
   // =============================================================================
 
+  // FOLDER TREE (sidebar). Each folder has a small arrow: click it to open or close the folder and see its
+  // notes; click the folder's name for its page. Open folders are remembered in the browser, and the
+  // folders of the note being read open by themselves (its title is in bold).
+  // ORDER OF THE NOTES in a folder (tree and folder page), see orderNotes():
+  //   - 'sequence' folders: when most file names start with a number (00 Overview, 01 Brindle...), or when
+  //     a note has an 'order:' property -> by 'order:', then by file name, numbers counted properly (2 < 10)
+  //   - other folders (monsters, rules...): alphabetical by title
+  const TREE_KEY = 'dm-tree';
+  let treeOpen = new Set();
+  try {
+    treeOpen = new Set(JSON.parse(localStorage.getItem(TREE_KEY)) || []);
+  } catch (e) {}
+  const treeSave = () => {
+    try {
+      localStorage.setItem(TREE_KEY, JSON.stringify([...treeOpen]));
+    } catch (e) {}
+  };
+  // Compares texts the way people read them: 'Scene 2' before 'Scene 10'.
+  const natural = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+  const orderOf = (n) => parseFloat(fmGet(n, 'order'));
+  function isSequence(notes) {
+    if (!notes.length) return false;
+    return notes.some((n) => !isNaN(orderOf(n))) || notes.filter((n) => /^\d/.test(n.name)).length * 2 >= notes.length;
+  }
+  function orderNotes(notes) {
+    const seq = isSequence(notes);
+    return [...notes].sort((a, b) => {
+      if (!seq) return natural(a.title, b.title);
+      const oa = orderOf(a),
+        ob = orderOf(b);
+      return (isNaN(oa) ? 1e9 : oa) - (isNaN(ob) ? 1e9 : ob) || natural(a.name, b.name);
+    });
+  }
+  // Sub-folders of a folder ('' = the root), sorted like the notes of a sequence (Chapter 2 before Chapter 10).
+  function subFolders(path) {
+    return [...S.folders.values()]
+      .filter((f) => f.path !== '' && f.path.slice(0, Math.max(0, f.path.lastIndexOf('/'))) === path && f.path !== path)
+      .sort((a, b) => folderRank(a.name) - folderRank(b.name) || natural(a.name, b.name));
+  }
+  // Folders that have a natural order other than alphabetical (item rarities, feat categories).
+  const FOLDER_ORDER = ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact', 'Varies', 'Origin', 'General', 'Fighting Style', 'Epic Boon'];
+  const folderRank = (name) => {
+    const i = FOLDER_ORDER.indexOf(name);
+    return i < 0 ? 0 : i + 1;
+  };
+  // Number of notes in a folder and all its sub-folders.
+  function folderTotal(path) {
+    let t = 0;
+    for (const f of S.folders.values()) if (f.path === path || f.path.startsWith(path + '/')) t += f.notes.length;
+    return t;
+  }
+  // The HTML of one folder (arrow, name, count) and, when it is open, of its sub-folders and notes.
+  function treeFolderHtml(f) {
+    const open = treeOpen.has(f.path);
+    const d = f.depth - 1;
+    let h = `<div class="tr-row" style="--d:${d}"><button type="button" class="tr-arrow" data-act="tree" data-path="${esc(f.path)}" aria-expanded="${open}" aria-label="${open ? 'Close' : 'Open'} ${esc(f.name)}">&#9656;</button><a href="#/f/${enc(f.path)}">${esc(f.name)} <span class="cnt">${folderTotal(f.path)}</span></a></div>`;
+    if (open) {
+      h += subFolders(f.path).map(treeFolderHtml).join('');
+      h += orderNotes(f.notes)
+        .map((n) => `<a class="tr-n${n.path === S.path ? ' cur' : ''}" style="--d:${d}" href="${noteHref(n)}" title="${esc(n.title)}">${esc(n.title)}</a>`)
+        .join('');
+    }
+    return h;
+  }
+  // When a note is shown, the folders that contain it are opened.
+  function treeReveal(path) {
+    const parts = path.split('/').slice(0, -1);
+    let changed = false;
+    for (let i = 1; i <= parts.length; i++) {
+      const p = parts.slice(0, i).join('/');
+      if (!treeOpen.has(p)) {
+        treeOpen.add(p);
+        changed = true;
+      }
+    }
+    if (changed) treeSave();
+  }
+
   // Draws the sidebar: Navigation links, one line per folder (indented by depth, with the note count),
   // and the Tools section. Links with data-act="..." are actions (open, reload, theme) handled by the
   // click handler in section 12. TO ADD A SIDEBAR LINK: add an <a href="#/..."> inside the template string.
@@ -5097,13 +5371,14 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
     const demo = S.demo
       ? `<div class="demo-note"><b>Example campaign</b> (read-only). <a href="${esc(DOWNLOAD_URL)}" target="_blank" rel="noopener">Download it</a> or <a href="#" data-act="open">open your own folder</a>.</div>`
       : '';
-    const folders = [...S.folders.values()]
-      .filter((f) => f.path !== '')
-      .sort((a, b) => a.path.localeCompare(b.path));
-    $('#side').innerHTML =
+    const top = subFolders('');
+    const side = $('#side');
+    const scroll = side.scrollTop; // the sidebar keeps its scroll position when it is redrawn
+    side.innerHTML =
       `${demo}<h4>Navigation</h4><a href="#/">Main page</a><a href="#/all">All pages</a><a href="#/tags">All tags</a>
-  ${folders.length ? '<h4>Folders</h4>' + folders.map((f) => `<a href="#/f/${enc(f.path)}" style="padding-left:${(f.depth - 1) * 12}px">${esc(f.name)} <span class="cnt">${f.notes.length}</span></a>`).join('') : ''}
+  ${top.length ? `<h4 class="tr-h">Folders${treeOpen.size ? '<button type="button" class="tr-none" data-act="tree-none" title="Close all folders">close all</button>' : ''}</h4>` + top.map(treeFolderHtml).join('') : ''}
   <h4>Tools</h4><a href="#/new">New note</a>${TOOLS.map((t) => `<a href="#/tool/${t.id}">${esc(t.name)}</a>`).join('')}<a href="#" data-act="open">Open folder&hellip;</a><a href="#" data-act="reload">Reload</a><a href="#" data-act="theme">Dark / light mode</a>`;
+    side.scrollTop = scroll;
   }
 
   // Called at start-up and on every hashchange.
@@ -5176,14 +5451,24 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
     else if (view === 'new') viewNew(arg);
     else if (view === 'all') viewList('All pages', S.notes.length + ' pages', S.notes);
     else if (view === 'f') {
+      // Folder page: its sub-folders, then its notes in the same order as the sidebar (orderNotes).
       const f = S.folders.get(arg);
-      viewList(
-        'Folder: ' + (arg || '(root)'),
-        (f ? f.notes.length : 0) +
-          ' pages in this folder &middot; <a href="#/new/' +
-          enc(arg) +
-          '">New note here</a>',
-        f ? f.notes : [],
+      const notes = f ? f.notes : [];
+      const subs = subFolders(arg);
+      const seq = isSequence(notes);
+      setContent(
+        `<h1 class="title">${esc('Folder: ' + (arg || '(root)'))}</h1><div class="sub">${notes.length} pages in this folder${subs.length ? ' &middot; ' + subs.length + ' sub-folders' : ''} &middot; <a href="#/new/${enc(arg)}">New note here</a></div><div class="body">${
+          subs.length
+            ? `<h2>Sub-folders</h2><div class="cols">${subs.map((x) => `<a href="#/f/${enc(x.path)}">${esc(x.name)} <span class="sub" style="margin:0">(${folderTotal(x.path)})</span></a>`).join('')}</div>`
+            : ''
+        }${
+          notes.length
+            ? (subs.length ? '<h2>Pages</h2>' : '') +
+              (seq ? `<ul class="seq">${orderNotes(notes).map((n) => `<li>${noteLink(n)}</li>`).join('')}</ul>` : listHtml(notes))
+            : subs.length
+              ? ''
+              : '<p>No pages here yet.</p>'
+        }</div>`,
       );
     } else if (view === 't') {
       const l = S.tags.get(arg) || [];
@@ -5562,6 +5847,18 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
       const act = a.dataset.act;
       if (act === 'open') openFolder();
       else if (act === 'demo') loadDemo();
+      // Folder tree (section 10): open / close one folder, close all.
+      else if (act === 'tree') {
+        const p = a.dataset.path;
+        if (treeOpen.has(p)) treeOpen.delete(p);
+        else treeOpen.add(p);
+        treeSave();
+        renderSide();
+      } else if (act === 'tree-none') {
+        treeOpen.clear();
+        treeSave();
+        renderSide();
+      }
       else if (act === 'reload') reload();
       else if (act === 'theme')
         setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
@@ -5591,6 +5888,8 @@ html,body{margin:0;height:100%;background:#000;color:#e9e6dc;overflow:hidden}
       else if (act === 'init-kind') initSwitchKind();
       else if (act === 'init-del') initDel(a.dataset.id);
       else if (act === 'init-undo') initUndoDel();
+      else if (act === 'init-from-note') initAddFromNote(a.dataset.path);
+      else if (act === 'pin-players') psShowCard(getNote(a.dataset.path));
       // Player screen (section 9G).
       else if (act === 'ps-menu') {
         if (wxOpen) wxToggle(false);

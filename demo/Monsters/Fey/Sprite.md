@@ -38,7 +38,7 @@ tags: [monster, fey, srd]
 
 **Heart Sight.** *Charisma Saving Throw:* DC 10, one creature within 5 feet the sprite can see (Celestials, Fiends, and Undead automatically fail the save). *Failure:* The sprite knows the target’s emotions and alignment.
 
-**Invisibility.** The sprite casts Invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability.
+**Invisibility.** The sprite casts [[Invisibility]] on itself, requiring no spell components and using Charisma as the spellcasting ability.
 
 ---
 

@@ -4,9 +4,9 @@ A Wikipedia-style reader for your Markdown campaign notes, made for game masters
 dice, weather, pinned notes and a screen for the players. It runs entirely in the browser: your notes stay
 on your computer.
 
-- **Use it online:** open DM Vault at laforest.art/dm-vault, then *Open my campaign folder* or *Try the example campaign*.
+- **Use it online:** open DM Vault on its website, then *Open my campaign folder* or *Try the example campaign*.
 - **Download everything:** the latest [release](../../releases/latest) contains `dm-vault.html` and a ready-to-use
-  campaign folder (an example chapter and the 2024 SRD bestiary). Unzip, open `dm-vault.html`, pick the `Campaign` folder.
+  campaign folder (an example chapter and the 2024 SRD: monsters, spells, magic items, feats). Unzip, open `dm-vault.html`, pick the `Campaign` folder.
 
 ## What is in this repository
 
@@ -19,7 +19,7 @@ on your computer.
 
 ## Credits
 
-The monsters and conditions in `demo/Monsters` and `demo/Rules` include material from the System Reference
+The monsters, conditions, spells, magic items and feats in `demo/Monsters`, `demo/Rules`, `demo/Spells`, `demo/Items` and `demo/Feats` include material from the System Reference
 Document 5.2 ("SRD 5.2") by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd, licensed under
 the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/legalcode).
 They were converted from the 5e-database project (https://github.com/5e-bits/5e-database, MIT License).

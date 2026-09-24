@@ -4,6 +4,7 @@ ancestry: human
 role: mayor of Brindle
 age: 58
 location: Brindle
+init: +0
 attitude: desperate, polite
 voice: speaks too fast, wrings his hat
 wants: his son back, the ash gone

@@ -38,17 +38,17 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 14):
 
-- **At Will:** *Detect Magic*, *Light*, *Mage Armor* (included in AC), *Mage Hand*, *Prestidigitation*
-- **2/Day Each:** *Fireball* (level 4 version), *Invisibility*
-- **1/Day Each:** *Cone of Cold*, *Fly*
+- **At Will:** *[[Detect Magic]]*, *[[Light]]*, *[[Mage Armor]]* (included in AC), *[[Mage Hand]]*, *[[Prestidigitation]]*
+- **2/Day Each:** *[[Fireball]]* (level 4 version), *[[Invisibility]]*
+- **1/Day Each:** *[[Cone of Cold]]*, *[[Fly]]*
 
 ## Bonus Actions
 
-**Misty Step (3/Day).** The mage casts Misty Step, using the same spellcasting ability as Spellcasting.
+**Misty Step (3/Day).** The mage casts [[Misty Step]], using the same spellcasting ability as Spellcasting.
 
 ## Reactions
 
-**Protective Magic (3/Day).** The mage casts Counterspell or Shield in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
+**Protective Magic (3/Day).** The mage casts [[Counterspell]] or [[Shield]] in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
 
 ---
 

@@ -52,8 +52,8 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The sphinx casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 20):
 
-- **At Will:** *Detect Evil and Good*, *Thaumaturgy*
-- **1/Day Each:** *Detect Magic*, *Dispel Magic*, *Greater Restoration*, *Heroes' Feast*, *Zone of Truth*
+- **At Will:** *[[Detect Evil and Good]]*, *[[Thaumaturgy]]*
+- **1/Day Each:** *[[Detect Magic]]*, *[[Dispel Magic]]*, *[[Greater Restoration]]*, *[[Heroes' Feast]]*, *[[Zone of Truth]]*
 
 ## Legendary Actions
 

@@ -38,7 +38,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Repulsion Breath or (B) Spellcasting to cast Guiding Bolt (level 2 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Repulsion Breath or (B) Spellcasting to cast [[Guiding Bolt]] (level 2 version).
 
 **Rend.** *Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 9 (2d8) Lightning damage.
 
@@ -48,14 +48,14 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22, +14 to hit with spell attacks):
 
-- **At Will:** *Detect Magic*, *Guiding Bolt* (level 2 version), *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), *Speak with Animals*, *Thaumaturgy*
-- **1/Day Each:** *Detect Thoughts*, *Control Water*, *Scrying*, *Water Breathing*
+- **At Will:** *[[Detect Magic]]*, *[[Guiding Bolt]]* (level 2 version), *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), *[[Speak with Animals]]*, *[[Thaumaturgy]]*
+- **1/Day Each:** *[[Detect Thoughts]]*, *[[Control Water]]*, *[[Scrying]]*, *[[Water Breathing]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the ancient bronze dragon can expend a use to take one of the following actions. The ancient bronze dragon regains all expended uses at the start of each of its turns.
 
-**Guiding Light.** The dragon uses Spellcasting to cast Guiding Bolt (level 2 version).
+**Guiding Light.** The dragon uses Spellcasting to cast [[Guiding Bolt]] (level 2 version).
 
 **Pounce.** The dragon moves up to half its Speed, and it makes one Rend attack.
 

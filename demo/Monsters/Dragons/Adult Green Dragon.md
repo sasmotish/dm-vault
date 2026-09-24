@@ -38,7 +38,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Mind Spike (level 3 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast [[Mind Spike]] (level 3 version).
 
 **Rend.** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage plus 7 (2d6) Poison damage.
 
@@ -46,14 +46,14 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):
 
-- **At Will:** *Detect Magic*, *Mind Spike* (level 3 version)
-- **1/Day Each:** *Geas*
+- **At Will:** *[[Detect Magic]]*, *[[Mind Spike]]* (level 3 version)
+- **1/Day Each:** *[[Geas]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the adult green dragon can expend a use to take one of the following actions. The adult green dragon regains all expended uses at the start of each of its turns.
 
-**Mind Invasion.** The dragon uses Spellcasting to cast Mind Spike (level 3 version).
+**Mind Invasion.** The dragon uses Spellcasting to cast [[Mind Spike]] (level 3 version).
 
 **Noxious Miasma.** *Constitution Saving Throw:* DC 17, each creature in a 20-foot-radius Sphere centered on a point the dragon can see within 90 feet. *Failure:* 7 (2d6) Poison damage, and the target takes a −2 penalty to AC until the end of its next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 

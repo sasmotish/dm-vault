@@ -46,11 +46,11 @@ tags: [monster, fiend, srd]
 
 **Spellcasting.** The oni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):
 
-- **1/Day Each:** *Charm Person* (level 2 version), *Darkness*, *Gaseous Form*, *Sleep*
+- **1/Day Each:** *[[Charm Person]]* (level 2 version), *[[Darkness]]*, *[[Gaseous Form]]*, *[[Sleep]]*
 
 ## Bonus Actions
 
-**Invisibility.** The oni casts Invisibility on itself, requiring no spell components and using the same spellcasting ability as Spellcasting.
+**Invisibility.** The oni casts [[Invisibility]] on itself, requiring no spell components and using the same spellcasting ability as Spellcasting.
 
 ---
 

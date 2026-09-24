@@ -50,8 +50,8 @@ tags: [monster, undead, srd]
 
 **Spellcasting.** The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 17, +9 to hit with spell attacks):
 
-- **At Will:** *Dispel Magic*, *Thaumaturgy*
-- **1/Day Each:** *Animate Dead*, *Harm*, *Insect Plague* (level 7 version)
+- **At Will:** *[[Dispel Magic]]*, *[[Thaumaturgy]]*
+- **1/Day Each:** *[[Animate Dead]]*, *[[Harm]]*, *[[Insect Plague]]* (level 7 version)
 
 ## Reactions
 
@@ -61,7 +61,7 @@ tags: [monster, undead, srd]
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the mummy lord can expend a use to take one of the following actions. The mummy lord regains all expended uses at the start of each of its turns.
 
-**Dread Command.** The mummy casts Command (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn.
+**Dread Command.** The mummy casts [[Command]] (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn.
 
 **Glare.** The mummy uses Dreadful Glare. The mummy can’t take this action again until the start of its next turn.
 

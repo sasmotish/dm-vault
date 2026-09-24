@@ -40,8 +40,8 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The owl casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability:
 
-- **At Will:** *Detect Evil and Good*, *Detect Magic*
-- **1/Day Each:** *Clairvoyance*
+- **At Will:** *[[Detect Evil and Good]]*, *[[Detect Magic]]*
+- **1/Day Each:** *[[Clairvoyance]]*
 
 ---
 

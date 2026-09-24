@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Scorching Ray (level 3 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast [[Scorching Ray]] (level 3 version).
 
 **Rend.** *Melee Attack Roll:* +17, reach 15 ft. *Hit:* 19 (2d8 + 10) Slashing damage plus 10 (3d6) Fire damage.
 
@@ -44,16 +44,16 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 23, +15 to hit with spell attacks):
 
-- **At Will:** *Command* (level 2 version), *Detect Magic*, *Scorching Ray* (level 3 version)
-- **1/Day Each:** *Fireball* (level 6 version), *Scrying*
+- **At Will:** *[[Command]]* (level 2 version), *[[Detect Magic]]*, *[[Scorching Ray]]* (level 3 version)
+- **1/Day Each:** *[[Fireball]]* (level 6 version), *[[Scrying]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the ancient red dragon can expend a use to take one of the following actions. The ancient red dragon regains all expended uses at the start of each of its turns.
 
-**Commanding Presence.** The dragon uses Spellcasting to cast Command (level 2 version). The dragon can’t take this action again until the start of its next turn.
+**Commanding Presence.** The dragon uses Spellcasting to cast [[Command]] (level 2 version). The dragon can’t take this action again until the start of its next turn.
 
-**Fiery Rays.** The dragon uses Spellcasting to cast Scorching Ray (level 3 version). The dragon can’t take this action again until the start of its next turn.
+**Fiery Rays.** The dragon uses Spellcasting to cast [[Scorching Ray]] (level 3 version). The dragon can’t take this action again until the start of its next turn.
 
 **Pounce.** The dragon moves up to half its Speed, and it makes one Rend attack.
 

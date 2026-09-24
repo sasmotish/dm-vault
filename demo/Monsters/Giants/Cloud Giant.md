@@ -32,7 +32,7 @@ tags: [monster, giant, srd]
 
 ## Actions
 
-**Multiattack.** The giant makes two attacks, using Thunderous Mace or Thundercloud in any combination. It can replace one attack with a use of Spellcasting to cast Fog Cloud.
+**Multiattack.** The giant makes two attacks, using Thunderous Mace or Thundercloud in any combination. It can replace one attack with a use of Spellcasting to cast [[Fog Cloud]].
 
 **Thunderous Mace.** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 21 (3d8 + 8) Bludgeoning damage plus 7 (2d6) Thunder damage.
 
@@ -40,8 +40,8 @@ tags: [monster, giant, srd]
 
 **Spellcasting.** The giant casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 15):
 
-- **At Will:** *Detect Magic*, *Fog Cloud*, *Light*
-- **1/Day Each:** *Control Weather*, *Gaseous Form*, *Telekinesis*
+- **At Will:** *[[Detect Magic]]*, *[[Fog Cloud]]*, *[[Light]]*
+- **1/Day Each:** *[[Control Weather]]*, *[[Gaseous Form]]*, *[[Telekinesis]]*
 
 ## Bonus Actions
 

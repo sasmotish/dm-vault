@@ -50,7 +50,7 @@ tags: [monster, fiend, srd]
 
 **Fiery Mace.** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 22 (4d6 + 8) Force damage plus 21 (6d6) Fire damage.
 
-**Hellfire Spellcasting (Recharge 4–6).** The pit fiend casts Fireball (level 5 version) twice, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21). It can replace one Fireball with Hold Monster (level 7 version) or Wall of Fire.
+**Hellfire Spellcasting (Recharge 4–6).** The pit fiend casts [[Fireball]] (level 5 version) twice, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21). It can replace one Fireball with Hold Monster (level 7 version) or Wall of Fire.
 
 ---
 

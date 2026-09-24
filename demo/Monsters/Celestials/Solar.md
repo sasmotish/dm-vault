@@ -50,12 +50,12 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):
 
-- **At Will:** *Detect Evil and Good*
-- **1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Resurrection*
+- **At Will:** *[[Detect Evil and Good]]*
+- **1/Day Each:** *[[Commune]]*, *[[Control Weather]]*, *[[Dispel Evil and Good]]*, *[[Resurrection]]*
 
 ## Bonus Actions
 
-**Divine Aid (3/Day).** The solar casts Cure Wounds (level 2 version), Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.
+**Divine Aid (3/Day).** The solar casts [[Cure Wounds]] (level 2 version), Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.
 
 ## Legendary Actions
 

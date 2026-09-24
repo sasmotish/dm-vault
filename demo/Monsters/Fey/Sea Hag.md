@@ -44,7 +44,7 @@ tags: [monster, fey, srd]
 
 **Death Glare (Recharge 5–6).** *Wisdom Saving Throw:* DC 11, one [[Frightened]] creature the hag can see within 30 feet. *Failure:* If the target has 20 Hit Points or fewer, it drops to 0 Hit Points. Otherwise, the target takes 13 (3d8) Psychic damage.
 
-**Illusory Appearance.** The hag casts Disguise Self, using Constitution as the spellcasting ability (spell save DC 13). The spell’s duration is 24 hours.
+**Illusory Appearance.** The hag casts [[Disguise Self]], using Constitution as the spellcasting ability (spell save DC 13). The spell’s duration is 24 hours.
 
 ---
 

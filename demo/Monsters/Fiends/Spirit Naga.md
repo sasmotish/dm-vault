@@ -44,8 +44,8 @@ tags: [monster, fiend, srd]
 
 **Spellcasting.** The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14):
 
-- **At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Water Breathing*
-- **2/Day Each:** *Detect Thoughts*, *Dimension Door*, *Hold Person* (level 3 version), *Lightning Bolt* (level 4 version)
+- **At Will:** *[[Detect Magic]]*, *[[Mage Hand]]*, *[[Minor Illusion]]*, *[[Water Breathing]]*
+- **2/Day Each:** *[[Detect Thoughts]]*, *[[Dimension Door]]*, *[[Hold Person]]* (level 3 version), *[[Lightning Bolt]]* (level 4 version)
 
 ---
 

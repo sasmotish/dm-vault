@@ -42,8 +42,8 @@ tags: [monster, fiend, srd]
 
 **Spellcasting.** The incubus casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 15):
 
-- **At Will:** *Disguise Self*, *Etherealness*
-- **1/Day Each:** *Dream*, *Hypnotic Pattern*
+- **At Will:** *[[Disguise Self]]*, *[[Etherealness]]*
+- **1/Day Each:** *[[Dream]]*, *[[Hypnotic Pattern]]*
 
 ## Bonus Actions
 

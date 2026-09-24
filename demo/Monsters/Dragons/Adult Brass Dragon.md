@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Sleep Breath or (B) Spellcasting to cast Scorching Ray.
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Sleep Breath or (B) Spellcasting to cast [[Scorching Ray]].
 
 **Rend.** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 17 (2d10 + 6) Slashing damage plus 4 (1d8) Fire damage.
 
@@ -46,14 +46,14 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16):
 
-- **At Will:** *Detect Magic*, *Minor Illusion*, *Scorching Ray*, *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), *Speak with Animals*
-- **1/Day Each:** *Detect Thoughts*, *Control Weather*
+- **At Will:** *[[Detect Magic]]*, *[[Minor Illusion]]*, *[[Scorching Ray]]*, *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), *[[Speak with Animals]]*
+- **1/Day Each:** *[[Detect Thoughts]]*, *[[Control Weather]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the adult brass dragon can expend a use to take one of the following actions. The adult brass dragon regains all expended uses at the start of each of its turns.
 
-**Blazing Light.** The dragon uses Spellcasting to cast Scorching Ray.
+**Blazing Light.** The dragon uses Spellcasting to cast [[Scorching Ray]].
 
 **Pounce.** The dragon moves up to half its Speed, and it makes one Rend attack.
 

@@ -44,8 +44,8 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):
 
-- **At Will:** *Thaumaturgy*
-- **1/Day Each:** *Clairvoyance*, *Cure Wounds* (level 6 version), *Flame Strike* (level 6 version), *Geas*, *True Seeing*
+- **At Will:** *[[Thaumaturgy]]*
+- **1/Day Each:** *[[Clairvoyance]]*, *[[Cure Wounds]]* (level 6 version), *[[Flame Strike]]* (level 6 version), *[[Geas]]*, *[[True Seeing]]*
 
 ---
 

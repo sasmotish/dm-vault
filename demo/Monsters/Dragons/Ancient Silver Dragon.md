@@ -36,7 +36,7 @@ tags: [monster, dragon, srd]
 
 ## Actions
 
-**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Paralyzing Breath or (B) Spellcasting to cast Ice Knife (level 2 version).
+**Multiattack.** The dragon makes three Rend attacks. It can replace one attack with a use of (A) Paralyzing Breath or (B) Spellcasting to cast [[Ice Knife]] (level 2 version).
 
 **Rend.** *Melee Attack Roll:* +17, reach 15 ft. *Hit:* 19 (2d8 + 10) Slashing damage plus 9 (2d8) Cold damage.
 
@@ -46,14 +46,14 @@ tags: [monster, dragon, srd]
 
 **Spellcasting.** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 23, +15 to hit with spell attacks):
 
-- **At Will:** *Detect Magic*, *Hold Monster*, *Ice Knife* (level 2 version), *Shapechange* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
-- **1/Day Each:** *Control Weather*, *Ice Storm* (level 7 version), *Teleport*, *Zone of Truth*
+- **At Will:** *[[Detect Magic]]*, *[[Hold Monster]]*, *[[Ice Knife]]* (level 2 version), *[[Shapechange]]* (beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
+- **1/Day Each:** *[[Control Weather]]*, *[[Ice Storm]]* (level 7 version), *[[Teleport]]*, *[[Zone of Truth]]*
 
 ## Legendary Actions
 
 **Legendary Action Uses:** 3 (4 in Lair). Immediately after another creature's turn, the ancient silver dragon can expend a use to take one of the following actions. The ancient silver dragon regains all expended uses at the start of each of its turns.
 
-**Chill.** The dragon uses Spellcasting to cast Hold Monster. The dragon can’t take this action again until the start of its next turn.
+**Chill.** The dragon uses Spellcasting to cast [[Hold Monster]]. The dragon can’t take this action again until the start of its next turn.
 
 **Cold Gale.** *Dexterity Saving Throw:* DC 23, each creature in a 60-foot-long, 10-foot-wide Line. *Failure:* 14 (4d6) Cold damage, and the target is pushed up to 30 feet straight away from the dragon. *Success:* Half damage only. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 

@@ -36,9 +36,9 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 
-- **At Will:** *Light*, *Thaumaturgy*
-- **2/Day Each:** *Command*
-- **1/Day Each:** *Hold Person*
+- **At Will:** *[[Light]]*, *[[Thaumaturgy]]*
+- **2/Day Each:** *[[Command]]*
+- **1/Day Each:** *[[Hold Person]]*
 
 ## Bonus Actions
 

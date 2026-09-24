@@ -38,7 +38,7 @@ tags: [monster, fey, srd]
 
 ## Actions
 
-**Multiattack.** The dryad makes one Vine Lash or Thorn Burst attack, and it can use Spellcasting to cast Charm Monster.
+**Multiattack.** The dryad makes one Vine Lash or Thorn Burst attack, and it can use Spellcasting to cast [[Charm Monster]].
 
 **Vine Lash.** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 8 (1d8 + 4) Slashing damage.
 
@@ -46,8 +46,8 @@ tags: [monster, fey, srd]
 
 **Spellcasting.** The dryad casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 14):
 
-- **At Will:** *Animal Friendship*, *Charm Monster* (lasts 24 hours; ends early if the dryad casts the spell again), *Druidcraft*
-- **1/Day Each:** *Entangle*, *Pass without Trace*
+- **At Will:** *[[Animal Friendship]]*, *[[Charm Monster]]* (lasts 24 hours; ends early if the dryad casts the spell again), *[[Druidcraft]]*
+- **1/Day Each:** *[[Entangle]]*, *[[Pass without Trace]]*
 
 ## Bonus Actions
 

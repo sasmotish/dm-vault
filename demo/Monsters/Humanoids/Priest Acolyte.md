@@ -38,11 +38,11 @@ tags: [monster, humanoid, srd]
 
 **Spellcasting.** The priest casts one of the following spells, using Wisdom as the spellcasting ability:
 
-- **At Will:** *Light*, *Thaumaturgy*
+- **At Will:** *[[Light]]*, *[[Thaumaturgy]]*
 
 ## Bonus Actions
 
-**Divine Aid (1/Day).** The priest casts Bless, Healing Word, or Sanctuary, using the same spellcasting ability as Spellcasting.
+**Divine Aid (1/Day).** The priest casts [[Bless]], [[Healing Word]], or Sanctuary, using the same spellcasting ability as Spellcasting.
 
 ---
 

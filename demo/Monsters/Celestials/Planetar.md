@@ -48,12 +48,12 @@ tags: [monster, celestial, srd]
 
 **Spellcasting.** The planetar casts one of the following spells, requiring no Material components and using Charisma as spellcasting ability (spell save DC 20):
 
-- **At Will:** *Detect Evil and Good*
-- **1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Raise Dead*
+- **At Will:** *[[Detect Evil and Good]]*
+- **1/Day Each:** *[[Commune]]*, *[[Control Weather]]*, *[[Dispel Evil and Good]]*, *[[Raise Dead]]*
 
 ## Bonus Actions
 
-**Divine Aid (2/Day).** The planetar casts Cure Wounds, Invisibility, Lesser Restoration, or Remove Curse, using the same spellcasting ability as Spellcasting.
+**Divine Aid (2/Day).** The planetar casts [[Cure Wounds]], [[Invisibility]], [[Lesser Restoration]], or Remove Curse, using the same spellcasting ability as Spellcasting.
 
 ---
 

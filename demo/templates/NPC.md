@@ -3,6 +3,7 @@ type: npc
 ancestry:
 role:
 location:
+init: +0
 attitude:
 voice:
 wants:

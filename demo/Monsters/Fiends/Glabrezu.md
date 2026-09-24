@@ -46,8 +46,8 @@ tags: [monster, fiend, srd]
 
 **Spellcasting.** The glabrezu casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):
 
-- **At Will:** *Darkness*, *Detect Magic*, *Dispel Magic*
-- **1/Day Each:** *Confusion*, *Fly*, *Power Word Stun*
+- **At Will:** *[[Darkness]]*, *[[Detect Magic]]*, *[[Dispel Magic]]*
+- **1/Day Each:** *[[Confusion]]*, *[[Fly]]*, *[[Power Word Stun]]*
 
 ---
 
