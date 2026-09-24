@@ -4,7 +4,7 @@ A Wikipedia-style reader for your Markdown campaign notes, made for game masters
 dice, weather, pinned notes and a screen for the players. It runs entirely in the browser: your notes stay
 on your computer.
 
-- **Use it online:** open DM Vault at laforest.art, then *Open my campaign folder* or *Try the example campaign*.
+- **Use it online:** open DM Vault at laforest.art/dm-vault, then *Open my campaign folder* or *Try the example campaign*.
 - **Download everything:** the latest [release](../../releases/latest) contains `dm-vault.html` and a ready-to-use
   campaign folder (an example chapter and the 2024 SRD bestiary). Unzip, open `dm-vault.html`, pick the `Campaign` folder.
 
