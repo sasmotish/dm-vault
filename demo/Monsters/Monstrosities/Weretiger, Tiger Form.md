@@ -1,0 +1,49 @@
+---
+type: monster
+size: Large
+creature: Monstrosity
+alignment: Neutral
+ac: 12
+init: +2
+hp: 120 (16d8 + 48)
+speed: 40 ft.
+str: 17
+dex: 15
+con: 16
+int: 10
+wis: 13
+cha: 11
+saves:
+skills: Perception +5, Stealth +4
+vulnerabilities:
+resistances:
+immunities:
+condition_immunities:
+gear: Longbow
+senses: Darkvision 60 ft.; Passive Perception 15
+languages: Common (can’t speak in tiger form)
+cr: 4
+xp: 1100
+xp_lair:
+image:
+tags: [monster, monstrosity, srd]
+---
+# Weretiger, Tiger Form
+
+## Actions
+
+**Multiattack.** The weretiger makes two attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack.
+
+**Bite.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 13. *Failure:* The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Weretiger under the GM’s control and has 10 Hit Points. *Success:* The target is immune to this weretiger’s curse for 24 hours.
+
+**Scratch.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage.
+
+## Bonus Actions
+
+**Prowl.** The weretiger moves up to its Speed without provoking Opportunity Attacks. At the end of this movement, the weretiger can take the Hide action.
+
+**Shape-Shift.** The weretiger shape-shifts into a Large tiger-humanoid hybrid or a Large tiger, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.
+
+---
+
+*Source: System Reference Document 5.2, CC BY 4.0. See [[About the SRD]].*

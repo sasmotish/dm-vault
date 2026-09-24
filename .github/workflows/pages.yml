@@ -1,0 +1,35 @@
+# Publishes this repository on GitHub Pages each time something is pushed to the main branch.
+# It first writes demo/manifest.json (the list of files of the example campaign), so you never have to.
+# Setup (once): Settings > Pages > Build and deployment > Source: "GitHub Actions".
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: List the files of the example campaign
+        run: python3 tools/make-manifest.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
